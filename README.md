@@ -25,9 +25,9 @@ Configuração para todos os arquivos:
 
 Caso você prefira alterar somente o valor da propriedade AWS, não terá de fazer mais nada! Mas caso siga o exemplo acima, terá que fazer referência a sua connection string nas classes necessárias para o Entity Framework entender, que são três:
 
-1º aqui: https://bit.ly/2y2T2RQ linha 23
-2º aqui: https://bit.ly/2y4bBFr linha 33
-3º aqui: https://bit.ly/2NeGD2G linha 32
+<p>1º aqui: https://bit.ly/2y2T2RQ linha 23</p>
+<p>2º aqui: https://bit.ly/2y4bBFr linha 33</p>
+<p>3º aqui: https://bit.ly/2NeGD2G linha 32</p>
 
 Alterar somente o valor colocando o mesmo que colocou no arquivo Json.
 
