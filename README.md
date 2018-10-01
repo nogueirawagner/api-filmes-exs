@@ -48,4 +48,7 @@ update-database -c ApplicationDbContext para o projeto Exs.Infra.Identity
 
 -------------
 
+Execute o projeto Exs.Api, não deixe apontando para o IIS.
+Ao rodar por default vai abrir a documentação da API fornecida pela Swagger.
+Documentação API Localhost: http://localhost:3405/swagger/index.html
 
