@@ -8,9 +8,10 @@ Para rodar o server na sua máquina faça:
 Por default o server está apontando para a base de dados da AWS então basta rodar!
 Caso queira executar em Localhost, siga os passos:
 Nos arquivos de configuração, package.json alterar a connection string apontando para o seu banco de dados. São três arquivos de configuração, onde um fica no projeto API para startar a aplicação outro para o projeto Identity que faz a parte de autenticação e autorização, e outro para o contexto do domínio da aplicação.
-1º arquivo está aqui: https://bit.ly/2OZNMFP
-2º arquivo está aqui: https://bit.ly/2Rem4a2
-3º arquivo está aqui: https://bit.ly/2DHqMdO
+
+<p>1º arquivo está aqui: https://bit.ly/2OZNMFP</p>
+<p>2º arquivo está aqui: https://bit.ly/2Rem4a2</p>
+<p>3º arquivo está aqui: https://bit.ly/2DHqMdO</p>
 
 Configuração para todos os arquivos:
 
