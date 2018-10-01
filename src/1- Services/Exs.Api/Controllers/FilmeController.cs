@@ -31,6 +31,7 @@ namespace Exs.Api.Controllers
     public IActionResult Adicionar([FromBody] FilmeViewModel pFilme)
     {
       var filme = _mapper.Map<FilmeViewModel, Filme>(pFilme);   // cria mapeamento da view model com entidade via automapper.
+      filme.Ativo = true;
       _filmeRepository.Adicionar(filme);  // Add do entity framework
 
       if (filme.EhValido())
