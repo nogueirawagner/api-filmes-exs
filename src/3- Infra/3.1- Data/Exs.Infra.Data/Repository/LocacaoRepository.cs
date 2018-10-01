@@ -14,5 +14,20 @@ namespace Exs.Infra.Data.Repository
       : base(context)
     {
     }
+
+
+    // Pega todos os filmes utilizando dapper.
+    // Dapper tem melhor desempenho para leitura do que para leitura.
+
+    public IEnumerable<Locacao> PegarTodos(string cpf)
+    {
+      var sql = @"
+                SELECT *
+                   FROM Locacao l
+                WHERE l.CPF = @cpf
+                ORDER BY l.DataLocacao;";
+
+      return Db.Database.GetDbConnection().Query<Locacao>(sql, new { cpf }).ToList();
+    }
   }
 }

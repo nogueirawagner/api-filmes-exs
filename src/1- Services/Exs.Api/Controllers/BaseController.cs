@@ -1,8 +1,6 @@
 ﻿using Exs.Domain.Interfaces;
-using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 
 namespace Exs.Api.Controllers
 {
@@ -10,11 +8,15 @@ namespace Exs.Api.Controllers
   public abstract class BaseController : Controller
   {
     protected Guid UsuarioId { get; set; }
+    protected string UsuarioCPF { get; set; }
     
     protected BaseController(IUser user)
     {
       if (user.IsAuthenticated())
+      {
         UsuarioId = user.GetUserId();
+        UsuarioCPF = user.Name;
+      }
     }
 
     protected new IActionResult Response(bool success, object result = null, object erros = null)

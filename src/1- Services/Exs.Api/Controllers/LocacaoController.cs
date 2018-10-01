@@ -37,8 +37,8 @@ namespace Exs.Api.Controllers
     [Route("pegar-todas")]
     public IEnumerable<LocacaoViewModel> PegarTodas()
     {
-      var locacoes = _locacaoRepository.PegarTodos();
-      var locacoesFilme = _locacaoFilmeRepository.PegarLocacoesFilme();
+      var locacoes = _locacaoRepository.PegarTodos(UsuarioCPF);
+      var locacoesFilme = _locacaoFilmeRepository.PegarLocacoesFilme(UsuarioCPF);
 
       MontarFilmesDaLocacao(locacoes.ToList(), locacoesFilme);
       return _mapper.Map<IEnumerable<LocacaoViewModel>>(locacoes);
@@ -68,7 +68,7 @@ namespace Exs.Api.Controllers
           _locacaoFilmeRepository.SaveChanges();
         }
 
-        var locacoesFilme = _locacaoFilmeRepository.PegarLocacoesFilmePorLocacaoId(locacao.Id);
+        var locacoesFilme = _locacaoFilmeRepository.PegarLocacoesFilmePorLocacaoId(locacao.Id, UsuarioCPF);
         MontarFilmesDaLocacao(locacao, locacoesFilme);
 
         var retorno = _mapper.Map<Locacao, LocacaoViewModel>(locacao);
@@ -108,7 +108,7 @@ namespace Exs.Api.Controllers
         }
       }
 
-      var locFilmes = _locacaoFilmeRepository.PegarLocacoesFilmePorLocacaoId(locacao.Id);
+      var locFilmes = _locacaoFilmeRepository.PegarLocacoesFilmePorLocacaoId(locacao.Id, UsuarioCPF);
       MontarFilmesDaLocacao(locacao, locFilmes);
 
       var retorno = _mapper.Map<Locacao, LocacaoViewModel>(locacao);
