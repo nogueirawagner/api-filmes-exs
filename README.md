@@ -43,8 +43,8 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 
 Como o Entity framework irá recriar a base e como existem dois contextos um para o domínio da aplicação e outro para o Identity então basta fazer o procedimento utilizando o Package Manager Console, irá apontar para dois projetos e executar o comando:
 
-update-database -c ContextDB para o projeto Exs.Infra.Data
-update-database -c ApplicationDbContext para o projeto Exs.Infra.Identity
+<p>update-database -c ContextDB para o projeto Exs.Infra.Data</p>
+<p>update-database -c ApplicationDbContext para o projeto Exs.Infra.Identity</p>
 
 -------------
 
