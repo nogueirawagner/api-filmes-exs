@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="3.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\2- Domain\exs.Domain\Exs.Domain.csproj" />
+    <ProjectReference Include="..\..\3- Infra\3.1- Data\Exs.Infra.Data\Exs.Infra.Data.csproj" />
+    <ProjectReference Include="..\..\3- Infra\3.2- Identity\Exs.Infra.Identity\Exs.Infra.Identity.csproj" />
+    <ProjectReference Include="..\..\3- Infra\3.3- Utils\Exs.Infra.Utils\Exs.Infra.Utils.csproj" />
+  </ItemGroup>
+
+</Project>
