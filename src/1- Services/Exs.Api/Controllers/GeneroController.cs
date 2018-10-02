@@ -44,6 +44,7 @@ namespace Exs.Api.Controllers
       if (genero.EhValido())
       {
         genero.Ativo = true;
+        genero.DataCriacao = DateTime.Now;
         _generoRepository.Adicionar(genero);
         _generoRepository.SaveChanges();
 
